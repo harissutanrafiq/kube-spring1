@@ -1,0 +1,32 @@
+package com.example.alfacart;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+@RestController
+public class Tes {
+
+
+    @GetMapping("/")
+    public String index(){
+        String out;
+        try {
+            String namaserver   = InetAddress.getLocalHost().getHostName();
+            String ipserver     = InetAddress.getLocalHost().getHostAddress();
+
+            out=  "<h2>hello world AWS EKS server SHOFIA</h2>IP : "+ ipserver + "<br> Hostname :" + namaserver  ;
+            out=out + "<div style='padding:10px'>Halooo ricky</div>";
+
+        }catch (UnknownHostException e){
+            e.printStackTrace();
+            out=e.getMessage();
+        }
+
+        return out;
+
+    }
+}
