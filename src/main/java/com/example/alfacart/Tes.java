@@ -18,8 +18,10 @@ public class Tes {
             String namaserver   = InetAddress.getLocalHost().getHostName();
             String ipserver     = InetAddress.getLocalHost().getHostAddress();
 
-            out=  "<h2>hello world AWS EKS server SHOFIA</h2>IP : "+ ipserver + "<br> Hostname :" + namaserver  ;
-            out=out + "<div style='padding:10px'>Halooo ricky</div>";
+            out=  "<h2>hello world AWS EKS server shofia</h2>IP : "+ ipserver + "<br> Hostname :" + namaserver  ;
+            out=out + "<div style='padding:10px'>Halooo</div><br><div>Env:</div>";
+            out=out + "<div>SPRING_BEFORE_OPTS: "+System.getenv("SPRING_BEFORE_OPTS")+"</div>";
+            out=out + "<div>SPRING_AFTER_OPTS: "+System.getenv("SPRING_AFTER_OPTS")+"</div>";
 
         }catch (UnknownHostException e){
             e.printStackTrace();
