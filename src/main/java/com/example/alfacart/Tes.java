@@ -19,7 +19,7 @@ public class Tes {
             String ipserver     = InetAddress.getLocalHost().getHostAddress();
 
             out=  "<h2>hello world AWS EKS server  </h2>IP : "+ ipserver + "<br> Hostname :" + namaserver  ;
-            out=out + "<div style='padding:10px'>Halooo Mas Adi</div><br><div>Env:</div>";
+            out=out + "<div style='padding:10px'>Halooo Fahmi</div><br><div>Env:</div>";
             out=out + "<div>SPRING_BEFORE_OPTS: "+System.getenv("SPRING_BEFORE_OPTS")+"</div>";
             out=out + "<div>SPRING_AFTER_OPTS: "+System.getenv("SPRING_AFTER_OPTS")+"</div>";
 
