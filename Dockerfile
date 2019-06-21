@@ -5,6 +5,7 @@ RUN apk add --update \
     tzdata
 
 ENV TZ Asia/Jakarta
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 MAINTAINER Haris Rafiq <haris.srafiq@gmail.com>
 ADD target/*.jar alfacart-0.0.1-SNAPSHOT.jar
