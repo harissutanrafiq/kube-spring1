@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk-alpine
 
 RUN apk add --update \
-    curl
+    curl \
     tzdata
 
 MAINTAINER Haris Rafiq <haris.srafiq@gmail.com>
