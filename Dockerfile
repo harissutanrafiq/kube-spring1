@@ -2,7 +2,8 @@ FROM openjdk:8-jdk-alpine
 
 RUN apk add --update \
     curl \
-    tzdata
+    tzdata \
+    busybox-extras
 
 ENV TZ Asia/Jakarta
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
