@@ -4,6 +4,8 @@ RUN apk add --update \
     curl \
     tzdata
 
+ENV TZ Asia/Jakarta
+
 MAINTAINER Haris Rafiq <haris.srafiq@gmail.com>
 ADD target/*.jar alfacart-0.0.1-SNAPSHOT.jar
 
